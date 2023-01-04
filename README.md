@@ -4,7 +4,7 @@ REQUIREMENTS
 
 Use Active Record to interact with a database.
 
-Have at least two models with a one-to-many relationship.
+<!-- Have at least two models with a one-to-many relationship. -->
 
 At a minimum, set up the following API routes in Sinatra:
     create and read actions for both models
@@ -12,7 +12,7 @@ At a minimum, set up the following API routes in Sinatra:
 
 Build a separate React frontend application that interacts with the API to perform CRUD actions.
 
-mplement proper front end state management. You should be updating state using a setState function after receiving your response from a POST, PATCH, or DELETE request. You should NOT be relying on a GET request to update state.
+Implement proper front end state management. You should be updating state using a setState function after receiving your response from a POST, PATCH, or DELETE request. You should NOT be relying on a GET request to update state.
 
 Use good OO design patterns. You should have separate classes for each of your models, and create instance and class methods as necessary.
 
