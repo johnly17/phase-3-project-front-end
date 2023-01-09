@@ -1,5 +1,6 @@
 import NewTask from './NewTask'
 import TaskList from './TaskList'
+import TaskImage from './project3img.png'
 
 import React, { useState, useEffect } from 'react'
 
@@ -40,8 +41,18 @@ function TaskListContainer() {
 
     return (
         <div className="task-container">
-            <NewTask addNewTask={addNewTask} />
-            <TaskList tasks={tasks} setTasks={setTasks} handleEdit={handleEdit} isEdit={isEdit} onTaskUpdate={onTaskUpdate}/>
+            <div>
+                <div className='new-task-input'>
+                    <NewTask addNewTask={addNewTask} />
+                </div>
+                <div className='task-img'>
+                    <img src={TaskImage} alt='you got this!' />
+                </div>
+
+            </div>
+            <div className='task-list'>
+                <TaskList tasks={tasks} setTasks={setTasks} handleEdit={handleEdit} isEdit={isEdit} onTaskUpdate={onTaskUpdate} />
+            </div>
         </div>
     )
 

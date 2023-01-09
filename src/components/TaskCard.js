@@ -19,10 +19,10 @@ function TaskCard({task, priority, onDelete, id, handleEdit, isEdit, onTaskUpdat
                 <li>Priority: {priority}</li>
                 {isEdit ? <EditTask task={task} priority={priority} id={id} onTaskUpdate={onTaskUpdate}/> :
                 null}
-                <button onClick={handleEdit}>Edit</button>
+                <button onClick={handleEdit}>✎</button>
                 <button
                 onClick={handleDelete}
-                >Delete</button>
+                >🗑</button>
             </div>
         </div>
     )

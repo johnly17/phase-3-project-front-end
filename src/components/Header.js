@@ -1,8 +1,9 @@
+import Logo from './project3Logo.png'
 
 function Header() {
     return (
         <div>
-            <h1 className="head-title">Task List</h1>
+            <img className='logo' src={Logo} alt="Logo" />
         </div>
     )
 }

@@ -32,7 +32,7 @@ function TaskList({tasks, setTasks, handleEdit, isEdit, onTaskUpdate}) {
 
     return (
         <div className="task-list">
-            <h3>My Tasks</h3>
+            <h3>To-Do List</h3>
             {taskDiv}
         </div>
     )

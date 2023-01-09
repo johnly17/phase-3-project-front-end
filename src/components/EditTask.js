@@ -24,18 +24,19 @@ function EditTask({ task, priority, id, onTaskUpdate }) {
     return (
         <form onSubmit={handleFormSubmit}>
             <input
+            className='edit-task'
                 type="text"
                 name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
-            <select onChange={e => setTaskCategory(e.target.value)}>
+            <select className='edit-select' onChange={e => setTaskCategory(e.target.value)}>
                 <option value="">Select Priority</option>
                 <option value="1">High</option>
                 <option value="2">Medium</option>
                 <option value="3">Low</option>
             </select>
-            <input type="submit" value="save" />
+            <input className="save-btn" type="submit" value="save" />
         </form>
     )
 

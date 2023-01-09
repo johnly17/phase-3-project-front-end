@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-function NewTask({addNewTask}) {
+function NewTask({ addNewTask }) {
 
     const [newTask, setNewTask] = useState("");
     const [newPriority, setNewPriority] = useState(null)
@@ -23,29 +23,38 @@ function NewTask({addNewTask}) {
     function handleNewTask(e) {
         e.preventDefault();
         fetch('http://localhost:9292/tasks', configObj)
-           .then(response => response.json())
-           .then(data => addNewTask(data))
-        }
+            .then(response => response.json())
+            .then(data => addNewTask(data))
+    }
     return (
         <div className="task-input">
-            <form onSubmit={handleNewTask}>
-            <label>New Task: 
-                <input 
-                type="text" 
-                name="task"
-                placeholder="Add a task..."
-                value={newTask}
-                onChange={e => setNewTask(e.target.value)}
-                ></input>
-                <select onChange={e => setNewPriority(e.target.value)}>
-                    <option value="">Select Priority</option>
-                    <option value="1">High</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Low</option>
-                </select>
-                <input type="submit" value="Submit" className="submit-btn"></input>
-                </label>
-            </form>
+            <div className='task-form'>
+                <form onSubmit={handleNewTask}>
+                    <div>
+                    <label>New Task:
+                        <div>
+                        <input
+                            type="text"
+                            name="task"
+                            placeholder="Add a task..."
+                            value={newTask}
+                            className="form__field"
+                            onChange={e => setNewTask(e.target.value)}
+                        ></input>
+                        </div>
+                        <div>
+                        <select className="new-select"onChange={e => setNewPriority(e.target.value)}>
+                            <option value="">Select Priority</option>
+                            <option value="1">High</option>
+                            <option value="2">Medium</option>
+                            <option value="3">Low</option>
+                        </select>
+                        </div>
+                        <input type="submit" value="Submit" className="button-32"></input>
+                    </label>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
